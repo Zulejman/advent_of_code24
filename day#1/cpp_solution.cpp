@@ -27,7 +27,7 @@ int main(){
 	vector<int> right_id;
 	vector<int> distances;
 	string line;
-	int total_sum = 0;
+	int distance_sum = 0;
 
 
 	while (getline(data_file, line)){
@@ -46,14 +46,10 @@ int main(){
 	bubbleSort(right_id);
 
 	for (int i = 0; i < left_id.size(); i++){
-		total_sum += (abs(left_id[i] - right_id[i]));
+		distance_sum += (abs(left_id[i] - right_id[i]));
 	}	
 
-	cout << total_sum;
+	cout << distance_sum;
 
 	return 0;
 }
-
-
-	
-	
