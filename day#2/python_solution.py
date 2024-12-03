@@ -12,7 +12,7 @@ def dataPrepare(file_name):
     data_file.close()
     return level_arrays
 
-def is_safe(report):
+def isSafe(report):
     increasing = None
     for i in range(len(report) - 1):
         diff = report[i + 1] - report[i]
@@ -38,8 +38,16 @@ def main():
     total_safe = 0
 
     for report in reports:
-        if is_safe(report):
+        level_state = isSafe(report)
+        if level_state:
             total_safe += 1
+        else:
+            for i in range(len(report)):
+                modified_report = report[:]
+                del modified_report[i]
+                if isSafe(modified_report):
+                    total_safe += 1
+                    break
 
     print(total_safe)
 
