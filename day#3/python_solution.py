@@ -3,6 +3,7 @@ import re
 uncorr_line = []
 total_value = 0
 
+#part 1
 with open("input.txt", "r") as file_data:
     for line in file_data:
         uncorr_line = re.findall("mul\((\d{1,3}),(\d{1,3})\)", line)
