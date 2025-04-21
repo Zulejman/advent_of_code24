@@ -6,3 +6,5 @@ I stopped :(
 I would like to add this line with cherry pick
 
 This line I would like not to add
+
+This one I would also like to add 
